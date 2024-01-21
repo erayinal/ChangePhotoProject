@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyFirstApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cats Photos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y61-H2-76D">
+                                <rect key="frame" x="117" y="100" width="159" height="32"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1f4-Zt-CWa">
+                                <rect key="frame" x="126" y="612" width="140" height="96"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="96" id="hdJ-Mu-yuo"/>
+                                </constraints>
+                                <buttonConfiguration key="configuration" style="filled" title="Change">
+                                    <color key="baseForegroundColor" systemColor="systemGray6Color"/>
+                                    <color key="baseBackgroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="ChangeClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tPh-0g-Xtk"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_3255" translatesAutoresizingMaskIntoConstraints="NO" id="Pf2-eb-GQN">
+                                <rect key="frame" x="61" y="216" width="271" height="202"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="202" id="Fgo-oX-0Lv"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Pf2-eb-GQN" firstAttribute="centerX" secondItem="1f4-Zt-CWa" secondAttribute="centerX" id="Eji-mi-zUM"/>
+                            <constraint firstItem="Pf2-eb-GQN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LNg-ZQ-ALy"/>
+                            <constraint firstItem="Pf2-eb-GQN" firstAttribute="top" secondItem="y61-H2-76D" secondAttribute="bottom" constant="84" id="dcm-84-C75"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1f4-Zt-CWa" secondAttribute="bottom" constant="110" id="fWr-ER-BeL"/>
+                            <constraint firstItem="1f4-Zt-CWa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="126" id="ndt-Wo-6VO"/>
+                            <constraint firstItem="y61-H2-76D" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="41" id="qRI-Ol-gKP"/>
+                            <constraint firstItem="y61-H2-76D" firstAttribute="centerX" secondItem="Pf2-eb-GQN" secondAttribute="centerX" id="rqc-bW-EYA"/>
+                            <constraint firstItem="Pf2-eb-GQN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="61" id="vhZ-cW-sdh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="CatsLabel" destination="y61-H2-76D" id="zDm-pX-ijA"/>
+                        <outlet property="imageView1" destination="Pf2-eb-GQN" id="88h-TF-loH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="57.251908396946561" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="IMG_3255" width="4032" height="3024"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
